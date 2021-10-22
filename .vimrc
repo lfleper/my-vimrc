@@ -27,7 +27,6 @@ colorscheme onehalfdark
 " If you are using vim-airline
 let g:airline_theme='onehalfdark'
 
-
 " tagbar on F8 key
 nmap <F8> :TagbarToggle<CR>
 
@@ -41,4 +40,6 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
+" autostart nerdtree and focus editor
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
