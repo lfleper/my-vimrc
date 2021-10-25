@@ -43,3 +43,5 @@ set expandtab
 " autostart nerdtree and focus editor
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+" Automatically quit vim if NERDTree is last and only buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
